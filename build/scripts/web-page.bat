@@ -70,7 +70,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\web-page.jar
+set CLASSPATH=%APP_HOME%\lib\web-page.jar;%APP_HOME%\lib\jbcrypt-0.4.jar;%APP_HOME%\lib\mysql-connector-j-8.0.33.jar;%APP_HOME%\lib\protobuf-java-3.21.9.jar
 
 
 @rem Execute web-page
