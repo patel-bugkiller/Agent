@@ -38,11 +38,12 @@ public class RegistrationHandler implements HttpHandler {
             
             // Delegate to our RegistrationService
             registrationService.registerUser(
-                params.get("name"),
+                params.get("phone_number"),
                 params.get("email"),
                 params.get("username"),
                 params.get("password")
             );
+
             
             sendResponse(exchange, 201, "Registration successful");
             

@@ -10,7 +10,7 @@ class RegistrationServiceTest {
         RegistrationService service = new RegistrationService(new UserRepository());
         
         Exception e = assertThrows(IllegalArgumentException.class, () -> {
-            service.registerUser("John", "", "john", "password123");
+            service.registerUser("1234567890", "", "john", "password123");
         });
         assertEquals("Email cannot be empty", e.getMessage());
     }
@@ -20,8 +20,19 @@ class RegistrationServiceTest {
         RegistrationService service = new RegistrationService(new UserRepository());
         
         Exception e = assertThrows(IllegalArgumentException.class, () -> {
-            service.registerUser("John", "john@example.com", "john", "123");
+            service.registerUser("1234567890", "john@example.com", "john", "123");
         });
         assertEquals("Password must be at least 6 characters", e.getMessage());
+    }
+
+    // New test to ensure Phone Number validation works
+    @Test
+    void testValidationFailsForEmptyPhoneNumber() {
+        RegistrationService service = new RegistrationService(new UserRepository());
+        
+        Exception e = assertThrows(IllegalArgumentException.class, () -> {
+            service.registerUser("", "john@example.com", "john", "password123");
+        });
+        assertEquals("Phone number cannot be empty", e.getMessage());
     }
 }

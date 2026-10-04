@@ -1,19 +1,20 @@
 package com.example.app;
 
 public class User {
-    private String name;
+    private String phoneNumber;
     private String email;
     private String username;
     private String password;
 
-    public User(String name, String email, String username, String password){
-        this.name = name;
+    public User(String phoneNumber, String email, String username, String password) {
+        this.phoneNumber = phoneNumber;
         this.email = email;
-        this.username=username;
-        this.password=password;
+        this.username = username;
+        this.password = password;
     }
-    public String getName(){ return name; }
+
+    public String getPhoneNumber() { return phoneNumber; }
     public String getEmail() { return email; }
-    public String getUsername(){return username;}
-    public String getPassword(){ return password; }
-    }
+    public String getUsername() { return username; }
+    public String getPassword() { return password; }
+}

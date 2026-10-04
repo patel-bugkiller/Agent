@@ -9,10 +9,10 @@ public class RegistrationService {
         this.userRepository = userRepository;
     }
 
-    public void registerUser(String name, String email, String username, String password) {
-        // 1. Validation
-        if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("Name cannot be empty");
+    public void registerUser(String phoneNumber, String email, String username, String password) {
+        // Validation updated for Phone Number
+        if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
+            throw new IllegalArgumentException("Phone number cannot be empty");
         }
         if (email == null || email.trim().isEmpty()) {
             throw new IllegalArgumentException("Email cannot be empty");
@@ -27,11 +27,9 @@ public class RegistrationService {
             throw new IllegalArgumentException("Password must be at least 6 characters");
         }
 
-        // 2. Hash password securely using BCrypt
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
-        // 3. Save the user
-        User user = new User(name, email, username, hashedPassword);
+        User user = new User(phoneNumber, email, username, hashedPassword);
         userRepository.save(user);
     }
 }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.app.RegistrationServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-04T06:27:30" hostname="--KAILASH--PATE" time="0.005">
+<testsuite name="com.example.app.RegistrationServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-08T09:02:03" hostname="--KAILASH--PATE" time="0.027">
   <properties/>
-  <testcase name="testValidationFailsForShortPassword()" classname="com.example.app.RegistrationServiceTest" time="0.003"/>
+  <testcase name="testValidationFailsForEmptyPhoneNumber()" classname="com.example.app.RegistrationServiceTest" time="0.021"/>
+  <testcase name="testValidationFailsForShortPassword()" classname="com.example.app.RegistrationServiceTest" time="0.002"/>
   <testcase name="testValidationFailsForEmptyEmail()" classname="com.example.app.RegistrationServiceTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

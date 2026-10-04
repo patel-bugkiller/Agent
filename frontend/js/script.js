@@ -2,14 +2,14 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
     // Prevent normal form submission/reload
     event.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
+    const phoneNumber = document.getElementById('phoneNumber').value.trim();
     const email = document.getElementById('email').value.trim();
     const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value;
     const messageBox = document.getElementById('messageBox');
 
     // Basic client-side validation
-    if (!name || !email || !username || !password) {
+    if (!phoneNumber || !email || !username || !password) {
         showMessage('All fields are required.', false);
         return;
     }
@@ -21,7 +21,7 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
 
     // Format data as URL-encoded to match our backend handler
     const formData = new URLSearchParams();
-    formData.append('name', name);
+    formData.append('phone_number', phoneNumber);
     formData.append('email', email);
     formData.append('username', username);
     formData.append('password', password);
