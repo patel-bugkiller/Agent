@@ -27,7 +27,7 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
     formData.append('password', password);
 
     // Send the data to the Java backend
-    fetch('http://localhost:8080/api/register', {
+    fetch('/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
