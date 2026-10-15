@@ -19,9 +19,9 @@ public class StaticFileHandler implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
         String path = exchange.getRequestURI().getPath();
         
-        // If the user just types http://localhost:8080/, give them index.html
+        // If the user just types http://localhost:8080/, give them login.html
         if (path.equals("/")) {
-            path = "/index.html";
+            path = "/login.html";
         }
 
         File file = new File(baseDir + path);

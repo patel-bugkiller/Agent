@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.app.UserRepositoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-08T09:02:03" hostname="--KAILASH--PATE" time="0.631">
+<testsuite name="com.example.app.UserRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-10T05:45:39" hostname="--KAILASH--PATE" time="0.059">
   <properties/>
+  <testcase name="testFindByEmailReturnsNullWhenNotFound()" classname="com.example.app.UserRepositoryTest" time="0.027"/>
   <testcase name="testUserModel()" classname="com.example.app.UserRepositoryTest" time="0.001"/>
-  <testcase name="testRepositoryExist()" classname="com.example.app.UserRepositoryTest" time="0.629"/>
+  <testcase name="testRepositoryExist()" classname="com.example.app.UserRepositoryTest" time="0.028"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

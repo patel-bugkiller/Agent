@@ -17,6 +17,8 @@ public class Main {
         // Handle Webpage requests (HTML/CSS/JS)
         server.createContext("/", new StaticFileHandler("C:/Users/kailash/Downloads/Project-web/frontend"));
 
+        LoginService loginService = new LoginService(repo);
+        server.createContext("/api/login", new LoginHandler(loginService));
         
         server.setExecutor(null);
         server.start();
